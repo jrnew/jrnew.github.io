@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>jrnew</title><link href="http://www.jrnew.me/" rel="alternate"></link><link href="http://www.jrnew.me/feeds/r.atom.xml" rel="self"></link><id>http://www.jrnew.me/</id><updated>2014-10-06T00:00:00-07:00</updated><entry><title>The State of the Union is dumber</title><link href="http://www.jrnew.me/state-of-the-union.html" rel="alternate"></link><updated>2014-10-06T00:00:00-07:00</updated><author><name>jrnew</name></author><id>tag:www.jrnew.me,2014-10-06:state-of-the-union.html</id><summary type="html">&lt;p&gt;I got the idea of calculating the &lt;a href="http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests" title="Fleisch-Kincaid readability test"&gt;Fleisch-Kincaid readability test&lt;/a&gt; score for all State of the Union Addresses after reading about how &lt;a href="https://medium.com/@johnnylin/going-from-nothing-to-product-hunt-in-4-hours-89cfb67977b3" title="Johnny Lin"&gt;it was used&lt;/a&gt; to calculate the average U.S. grade level of a user's tweets in &lt;a href="http://www.beakscore.com/" title="Beak"&gt;Beak&lt;/a&gt;. After some googling, it turns out &lt;a href="http://www.theguardian.com/world/interactive/2013/feb/12/state-of-the-union-reading-level" title="The Guardian"&gt;The Guardian&lt;/a&gt; already beat me to it, but this still makes for a fun exercise.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;library&lt;span class="p"&gt;(&lt;/span&gt;XML&lt;span class="p"&gt;)&lt;/span&gt;
+library&lt;span class="p"&gt;(&lt;/span&gt;stringr&lt;span class="p"&gt;)&lt;/span&gt;
+library&lt;span class="p"&gt;(&lt;/span&gt;koRpus&lt;span class="p"&gt;)&lt;/span&gt;
+library&lt;span class="p"&gt;(&lt;/span&gt;ggplot2&lt;span class="p"&gt;)&lt;/span&gt;
+library&lt;span class="p"&gt;(&lt;/span&gt;gridExtra&lt;span class="p"&gt;)&lt;/span&gt;
+source&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;R/speech-functions.R&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+output_dir &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;output&amp;quot;&lt;/span&gt;
+&lt;span class="c1"&gt;# Get list of speech objects&lt;/span&gt;
+dir.create&lt;span class="p"&gt;(&lt;/span&gt;output_dir&lt;span class="p"&gt;,&lt;/span&gt; showWarnings &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;FALSE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="kr"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;file.exists&lt;span class="p"&gt;(&lt;/span&gt;file.path&lt;span class="p"&gt;(&lt;/span&gt;output_dir&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;speech_list_all.rda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  urls_speech &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; GetSpeechURLs&lt;span class="p"&gt;()&lt;/span&gt;
+  speech_list_all &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; lapply&lt;span class="p"&gt;(&lt;/span&gt;urls_speech&lt;span class="p"&gt;,&lt;/span&gt; GetAndProcessSpeech&lt;span class="p"&gt;)&lt;/span&gt;
+  names&lt;span class="p"&gt;(&lt;/span&gt;speech_list_all&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; sapply&lt;span class="p"&gt;(&lt;/span&gt;speech_list_all&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;speech_list&lt;span class="p"&gt;)&lt;/span&gt; 
+    paste&lt;span class="p"&gt;(&lt;/span&gt;speech_list&lt;span class="o"&gt;$&lt;/span&gt;speech_data_scalar&lt;span class="o"&gt;$&lt;/span&gt;president&lt;span class="p"&gt;,&lt;/span&gt; speech_list&lt;span class="o"&gt;$&lt;/span&gt;speech_data_scalar&lt;span class="o"&gt;$&lt;/span&gt;year&lt;span class="p"&gt;))&lt;/span&gt;
+  save&lt;span class="p"&gt;(&lt;/span&gt;speech_list_all&lt;span class="p"&gt;,&lt;/span&gt; file &lt;span class="o"&gt;=&lt;/span&gt; file.path&lt;span class="p"&gt;(&lt;/span&gt;output_dir&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;speech_list_all.rda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="kr"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  load&lt;span class="p"&gt;(&lt;/span&gt;file.path&lt;span class="p"&gt;(&lt;/span&gt;output_dir&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;speech_list_all.rda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="c1"&gt;# Get speech data frame&lt;/span&gt;
+&lt;span class="kr"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;file.exists&lt;span class="p"&gt;(&lt;/span&gt;file.path&lt;span class="p"&gt;(&lt;/span&gt;output_dir&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;speech_df.rda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  speech_df &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; GetSpeechDataFrame&lt;span class="p"&gt;(&lt;/span&gt;speech_list_all&lt;span class="p"&gt;)&lt;/span&gt;
+  save&lt;span class="p"&gt;(&lt;/span&gt;speech_df&lt;span class="p"&gt;,&lt;/span&gt; file &lt;span class="o"&gt;=&lt;/span&gt; file.path&lt;span class="p"&gt;(&lt;/span&gt;output_dir&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;speech_df.rda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt; &lt;span class="kr"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  load&lt;span class="p"&gt;(&lt;/span&gt;file.path&lt;span class="p"&gt;(&lt;/span&gt;output_dir&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;speech_df.rda&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Final plot:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c1"&gt;# F-K readability vs year bubble charts&lt;/span&gt;
+speech_df&lt;span class="o"&gt;$&lt;/span&gt;num_words_scaled &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; sqrt&lt;span class="p"&gt;(&lt;/span&gt;speech_df&lt;span class="o"&gt;$&lt;/span&gt;num_words&lt;span class="o"&gt;/&lt;/span&gt;pi&lt;span class="p"&gt;)&lt;/span&gt;
+p &lt;span class="o"&gt;&amp;lt;-&lt;/span&gt; ggplot&lt;span class="p"&gt;(&lt;/span&gt;speech_df&lt;span class="p"&gt;,&lt;/span&gt; 
+            aes_string&lt;span class="p"&gt;(&lt;/span&gt;x &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;year&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; y &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;readability_grade&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+                       color &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;president&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; size &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;num_words_scaled&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+  geom_point&lt;span class="p"&gt;(&lt;/span&gt;alpha &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="m"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt;
+  xlab&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Year of address&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; ylab&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Flesch-Kincaid readability score\n(U.S. grade level)&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+  scale_size_continuous&lt;span class="p"&gt;(&lt;/span&gt;name &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;# words&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+                        breaks &lt;span class="o"&gt;=&lt;/span&gt; sqrt&lt;span class="p"&gt;(&lt;/span&gt;c&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2500&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;10000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;pi&lt;span class="p"&gt;),&lt;/span&gt; 
+                        labels &lt;span class="o"&gt;=&lt;/span&gt; c&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="m"&gt;2500&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;5000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="m"&gt;10000&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; 
+  scale_colour_hue&lt;span class="p"&gt;(&lt;/span&gt;guide &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;FALSE&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+print&lt;span class="p"&gt;(&lt;/span&gt;p&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="plot of chunk plot" src="figure/plot.png" /&gt; &lt;/p&gt;</summary></entry></feed>

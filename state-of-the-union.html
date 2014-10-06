@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>jrnew</title>
+        <title>The State of the Union is dumber</title>
         <link rel="stylesheet" href="http://www.jrnew.me/theme/css/main.css" />
         <link href="http://www.jrnew.me/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="jrnew Atom Feed" />
 
@@ -15,13 +15,18 @@
         <header id="banner" class="body">
                 <h1><a href="http://www.jrnew.me/">jrnew </a></h1>
                 <nav><ul>
-                    <li><a href="http://www.jrnew.me/category/r.html">R</a></li>
+                    <li class="active"><a href="http://www.jrnew.me/category/r.html">R</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://www.jrnew.me/state-of-the-union.html" rel="bookmark"
+           title="Permalink to The State of the Union is dumber">The State of the Union is dumber</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://www.jrnew.me/state-of-the-union.html">The State of the Union is dumber</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2014-10-06T00:00:00">
                 Published: Mon 06 October 2014
@@ -32,7 +37,7 @@
         </address>
 <p>In <a href="http://www.jrnew.me/category/r.html">R</a>. </p>
 
-</footer><!-- /.post-info --><p>I got the idea of calculating the <a href="http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests" title="Fleisch-Kincaid readability test">Fleisch-Kincaid readability test</a> score for all State of the Union Addresses after reading about how <a href="https://medium.com/@johnnylin/going-from-nothing-to-product-hunt-in-4-hours-89cfb67977b3" title="Johnny Lin">it was used</a> to calculate the average U.S. grade level of a user's tweets in <a href="http://www.beakscore.com/" title="Beak">Beak</a>. After some googling, it turns out <a href="http://www.theguardian.com/world/interactive/2013/feb/12/state-of-the-union-reading-level" title="The Guardian">The Guardian</a> already beat me to it, but this still makes for a fun exercise.</p>
+</footer><!-- /.post-info -->      <p>I got the idea of calculating the <a href="http://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests" title="Fleisch-Kincaid readability test">Fleisch-Kincaid readability test</a> score for all State of the Union Addresses after reading about how <a href="https://medium.com/@johnnylin/going-from-nothing-to-product-hunt-in-4-hours-89cfb67977b3" title="Johnny Lin">it was used</a> to calculate the average U.S. grade level of a user's tweets in <a href="http://www.beakscore.com/" title="Beak">Beak</a>. After some googling, it turns out <a href="http://www.theguardian.com/world/interactive/2013/feb/12/state-of-the-union-reading-level" title="The Guardian">The Guardian</a> already beat me to it, but this still makes for a fun exercise.</p>
 <div class="highlight"><pre>library<span class="p">(</span>XML<span class="p">)</span>
 library<span class="p">(</span>stringr<span class="p">)</span>
 library<span class="p">(</span>koRpus<span class="p">)</span>
@@ -77,11 +82,11 @@ print<span class="p">(</span>p<span class="p">)</span>
 </pre></div>
 
 
-<p><img alt="plot of chunk plot" src="figure/plot.png" /> </p>                </article>
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </aside><!-- /#featured -->
+<p><img alt="plot of chunk plot" src="figure/plot.png" /> </p>
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
