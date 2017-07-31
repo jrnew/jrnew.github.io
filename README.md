@@ -1,9 +1,11 @@
 # S(k|c)eptical Statistician
 
-## Author
+Well. So it begins.
 
-**JR New**
-- <https://github.com/jrnew>
-- <https://twitter.com/jrnewww>
-- <https://www.linkedin.com/in/jrnew>
+## JR New
+
+Find me on:
+- [Github](https://github.com/jrnew)
+- [Twitter](https://twitter.com/jrnewww)
+- [LinkedIn](https://www.linkedin.com/in/jrnew)
 
