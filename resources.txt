@@ -1,0 +1,2 @@
+http://joshualande.com/jekyll-github-pages-poole
+http://downtothewire.io/2015/08/15/configuring-jekyll-for-user-and-project-github-pages/

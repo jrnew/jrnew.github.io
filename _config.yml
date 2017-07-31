@@ -1,0 +1,28 @@
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            It's Me
+tagline:          'S(k|c)eptical Statistician'
+description:      'S(k|c)eptical Statistician'
+url:              http://jrnew.github.io
+baseurl:          
+
+author:
+  name:           'JR New'
+  url:            https://twitter.com/jrnewww
+
+paginate:         5
+
+# Custom vars
+version:          0.1.0
+
+github:
+  repo:           https://github.com/jrnew
+
+# Plugins
+plugins:          [jekyll-paginate, jekyll-gist]
