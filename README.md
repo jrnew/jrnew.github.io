@@ -1,4 +1,4 @@
-# Sceptical Statistician
+# S(k|c)eptical Statistician
 
 ## Author
 
