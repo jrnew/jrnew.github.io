@@ -1,0 +1,4 @@
+- Add twitter sharing button
+- Add comments — done
+- Add Google analytics — done
+- Smaller font — done

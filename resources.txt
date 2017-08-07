@@ -1,3 +1,10 @@
 http://joshualande.com/jekyll-github-pages-poole
 http://downtothewire.io/2015/08/15/configuring-jekyll-for-user-and-project-github-pages/
 https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
+
+# Disqus comments
+http://sgeos.github.io/jekyll/disqus/2016/02/14/adding-disqus-to-a-jekyll-blog.html
+https://desiredpersona.com/disqus-comments-jekyll/
+
+# Google analytics
+https://desiredpersona.com/google-analytics-jekyll/

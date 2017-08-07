@@ -27,3 +27,12 @@ github:
 
 # Plugins
 plugins:          [jekyll-paginate, jekyll-gist]
+
+# Disqus comments
+disqus:
+    # Leave shortname blank to disable comments site-wide.
+    # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
+    shortname: skcepticalstatistician
+
+# Google analytics
+google_analytics: UA-42087579-3

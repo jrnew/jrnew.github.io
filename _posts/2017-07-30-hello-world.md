@@ -3,6 +3,7 @@ layout: post
 title: Hello World
 permalink: hello-world
 tags: [links]
+comments: true
 ---
 
 It's been maybe two and half years since my last attempt at getting a blog going, and a confluence of factors is reviving this effort once more. They are:
