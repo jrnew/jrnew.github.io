@@ -72,3 +72,7 @@ More events [here](https://www.thecoast.ca/halifax/EventSearch).
 * Try [tidal bore rafting](http://www.bayoffundy.com/activities/tidal-bore-rafting/) in the Bay of Fundy, home to the highest tides in the world, 1h drive away
 * Stargaze in Kejimkujik National Park, a dark sky preserve, 2h drive away
 * [Hike in Cape Breton Highlands National Park](https://www.alltrails.com/parks/canada/nova-scotia/cape-breton-highlands-national-park-of-canada), 4.5h drive away (or longer, given there seems to be some road construction happening now)
+
+-----
+
+So who else is going to be at KDD next week?
