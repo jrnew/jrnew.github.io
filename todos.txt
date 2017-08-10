@@ -1,4 +1,1 @@
 - Add twitter sharing button
-- Add comments — done — does the comment count work?
-- Add Google analytics — done
-- Smaller font — done
