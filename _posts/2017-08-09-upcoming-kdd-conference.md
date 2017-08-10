@@ -16,7 +16,7 @@ Halifax doesn't strike me as an obvious choice as a location for a big conferenc
 
 ### Down to business
 
-So this is me attempting to plan out a schedule for the conference. Probably subject to change depending on my how my interest and energy levels wax and wane. Do holler if you have anything particular ones to recommend (this was based on simply glancing through the schedule and summaries).
+So this is me attempting to plan out a schedule for the conference. Probably subject to change depending on my how my interest and energy levels wax and wane. Do holler if you have any particular ones to recommend (this was based on simply glancing through the schedule and summaries).
 
 **Sun, 8/13**   
 8am-12pm: [Deep Learning for Personalized Search and Recommender Systems](https://engineering.linkedin.com/data/publications/kdd-2017/deep-learning-tutorial)  
