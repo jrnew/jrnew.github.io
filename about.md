@@ -7,6 +7,8 @@ title: About
 
 I'm a s(k/c)eptical statistician; nowadays I also go by the term 'data scientist'. I also love food, languages, travel, photography. 
 
+Obviously, I am still undecided between American and British spelling.
+
 Find me on:
 
 * Twitter: [@jrnewww](https://twitter.com/jrnewww)
