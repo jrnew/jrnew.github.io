@@ -37,6 +37,7 @@ The incredible and badass panel of this year's 3 keynote speakers Prof Bin Yu, P
 * ALWAYS ASK. Keep asking. From her experience, she sees men ask 10 times for every one time a woman asks for a salary raise    
 * Do your research before you ask for a salary raise  
 * Shop around in the job market to understand your market value. Have a counter-offer at hand   
+* Don't feel bad about asking for what you want. Think about how you are pulling up the women behind you -- if you settle, you might be held up as an exaxmple for why the next woman can't get what she's asking for. One person gave the example of how not just her but the whole department got salary increments after she asked for better compensation   
 * Instead of being the first to put forward your idea, especially when you are the lone voice for that viewpoint in the room, hang back, listen, then summarize the viewpoints of everyone else before putting forward your point        
 * Find a way to get the person you are negotiating with to say yes before you put forward your request. E.g. "Here's the project I'm planning, does it sound good? And here are the resources we need, do you agree with it? Oh and relatedly I'd like a raise. :)". Even if you ask a question that elicits a "no" response, what you can do is to summarize what the other party says about it, and ask if that is right, and if summarized well you should get a "yes"   
 * A psychological trick: Start nodding while talking and the other party might subconsciously start to nod along   
