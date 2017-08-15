@@ -22,7 +22,12 @@ comments: true
 
 #### [Keynote: Bin Yu - Three Principles of Data Science: Predictability, Stability, and Computability](http://www.kdd.org/kdd2017/keynotes/view/three-principles-of-data-science-predictability-stability-and-computability)   
 
-Prof Bin Yu is one of the remarkable people in the field who are able to see the big ideas that endure across different fields and from past to present anad articulate them well. Some key takeaways:    
+Prof Bin Yu is one of the remarkable people in the field who are able to see the big ideas that endure across different fields and from past to present anad articulate them well!    
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Prof Bin Yu at her <a href="https://twitter.com/hashtag/kdd2017?src=hash">#kdd2017</a> keynote. Always impressive how she can see the big ideas from past to present and across different fields. <a href="https://t.co/5AgcIHBMR3">pic.twitter.com/5AgcIHBMR3</a></p>&mdash; JR New (@jrnewww) <a href="https://twitter.com/jrnewww/status/897517174776094720">August 15, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Some key takeaways:    
 * Computing was borne out of necessity for use in statistics for the census, yet the two fields have diverged since then. With data science what we're seeing is a re-merging of the two fields  
 * Predictability, stability and computability are the three principles of data science: Prediction is the central tasks with computation as its core; good prediction implicitly assumes stability between past and future. Stability (relative to data and model perturbations) is also a minimum requirement for interpretability and reproducibility of data driven results    
 * Stability refers to stability relative to appropriate data perturbations (e.g. bootstrap, subsampling, adding small amount of noise to data) or model perturbations (lasso/ridge models, different models of deep learning)    
@@ -32,6 +37,9 @@ Prof Bin Yu is one of the remarkable people in the field who are able to see the
 #### KDD Women's Lunch
 
 The incredible and badass panel of this year's 3 keynote speakers Prof Bin Yu, Prof Renée J. Miller and Prof Cynthia Dwork shared their personal experiences and great stories about working in the field before taking questions.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">So many incredible and badass women in data science at the <a href="https://twitter.com/hashtag/kdd2017?src=hash">#kdd2017</a> women&#39;s lunch! <a href="https://t.co/WQ9OB17Gaz">pic.twitter.com/WQ9OB17Gaz</a></p>&mdash; JR New (@jrnewww) <a href="https://twitter.com/jrnewww/status/897513490637873152">August 15, 2017</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 [Katy Yam](https://www.linkedin.com/in/katyyam) stood up and passionately gave some advice on negotiation, with others in the room chipping in. A few points from that plus talking to Katy and others in a smaller group after the event for salary negotiation (or just general negotiation) that I remember:    
 * ALWAYS ASK. Keep asking. From her experience, she sees men ask 10 times for every one time a woman asks for a salary raise    
