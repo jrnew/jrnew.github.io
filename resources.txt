@@ -2,6 +2,9 @@ http://joshualande.com/jekyll-github-pages-poole
 http://downtothewire.io/2015/08/15/configuring-jekyll-for-user-and-project-github-pages/
 https://www.smashingmagazine.com/2014/08/build-blog-jekyll-github-pages/
 
+# Github 2FA
+https://stackoverflow.com/questions/13800289/configure-git-clients-like-github-for-windows-to-not-ask-for-authentication/18607931#18607931
+
 # Disqus comments
 http://sgeos.github.io/jekyll/disqus/2016/02/14/adding-disqus-to-a-jekyll-blog.html
 https://desiredpersona.com/disqus-comments-jekyll/
