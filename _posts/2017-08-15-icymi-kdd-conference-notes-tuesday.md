@@ -36,7 +36,7 @@ Some key takeaways:
 
 #### KDD Women's Lunch
 
-The incredible and badass panel of this year's 3 keynote speakers Prof Bin Yu, Prof Renée J. Miller and Prof Cynthia Dwork shared their personal experiences and great stories about working in the field before taking questions.
+The incredible and badass panel of this year's 3 keynote speakers [Prof Bin Yu](http://www.kdd.org/kdd2017/keynotes/view/three-principles-of-data-science-predictability-stability-and-computability), [Prof Cynthia Dwork](http://www.kdd.org/kdd2017/keynotes/view/whats-fair) and [Prof Renée J. Miller](http://www.kdd.org/kdd2017/keynotes/view/the-future-of-data-integration) shared their personal experiences and great stories about working in the field before taking questions.
 
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">So many incredible and badass women in data science at the <a href="https://twitter.com/hashtag/kdd2017?src=hash">#kdd2017</a> women&#39;s lunch! <a href="https://t.co/WQ9OB17Gaz">pic.twitter.com/WQ9OB17Gaz</a></p>&mdash; JR New (@jrnewww) <a href="https://twitter.com/jrnewww/status/897513490637873152">August 15, 2017</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -74,3 +74,6 @@ Talk was unfortunately (but not surprisingly!) very surface-level.
 * +AI: Identifying a specific problem, e.g. packing things in a warehouse, and applying AI to improve over the current approach   
 * AI+: Providing end-to-end AI solutions, i.e. AI-as-a-service, e.g. search service, graph computing and analysis service  
 * Next step: How do we maintain the services as the number of users and types of applications grow?   
+
+Uh this was mostly a plug for Huawei's AI platforms.  
+
